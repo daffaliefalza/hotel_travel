@@ -14,6 +14,7 @@ class _HotelPageState extends State<HotelPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 230, 230, 230),
       // AppBar
       appBar: AppBar(
         elevation: 0,
@@ -51,7 +52,9 @@ class _HotelPageState extends State<HotelPage> {
                     ),
                   ),
                   onPressed: () {},
-                  child: Text("Semua"),
+                  child: Text(
+                    "Semua",
+                  ),
                 ),
                 ElevatedButton(
                   style: ButtonStyle(
@@ -65,7 +68,12 @@ class _HotelPageState extends State<HotelPage> {
                     ),
                   ),
                   onPressed: () {},
-                  child: Text("Rating"),
+                  child: Text(
+                    "Rating",
+                    style: TextStyle(
+                      color: Colors.black,
+                    ),
+                  ),
                 ),
                 ElevatedButton(
                   style: ButtonStyle(
@@ -79,7 +87,10 @@ class _HotelPageState extends State<HotelPage> {
                     ),
                   ),
                   onPressed: () {},
-                  child: Text("Kota"),
+                  child: Text(
+                    "Kota",
+                    style: TextStyle(color: Colors.black),
+                  ),
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -102,7 +113,7 @@ class _HotelPageState extends State<HotelPage> {
                     ),
                   ),
                   onPressed: () {},
-                  child: Text("Harga"),
+                  child: Text("Harga", style: TextStyle(color: Colors.black)),
                 ),
               ],
             ),
@@ -111,19 +122,43 @@ class _HotelPageState extends State<HotelPage> {
             height: 15,
           ),
           // Cards
-          Cards(),
+          Cards(
+            image: 'assets/banner-1.png',
+            hotelName: 'Hotel Horison Bekasi',
+            address: 'Kayuringin Jaya, Jl. KH. Noer Ali',
+            startTag: 'Mulai dari',
+            price: '650.000',
+          ),
           SizedBox(
             height: 15,
           ),
-          Cards(),
+          Cards(
+            image: 'assets/banner-2.png',
+            hotelName: 'Hotel Melati',
+            address: 'Gelora  Bung Karno, Jakarta',
+            startTag: 'Mulai dari',
+            price: 'IDR 1.350.000',
+          ),
           SizedBox(
             height: 15,
           ),
-          Cards(),
+          Cards(
+            image: 'assets/rectangle-1.png',
+            hotelName: 'Hotel Acacia',
+            address: 'Gelora  Bung Karno, Jakarta',
+            startTag: 'Mulai dari',
+            price: 'IDR 1.350.000',
+          ),
           SizedBox(
             height: 15,
           ),
-          Cards(),
+          Cards(
+            image: 'assets/rectangle-2.png',
+            hotelName: 'Hotel Ciputra',
+            address: 'Eka Hospital, Bogor',
+            startTag: 'Mulai dari',
+            price: 'IDR 1.350.000',
+          ),
           SizedBox(
             height: 15,
           ),

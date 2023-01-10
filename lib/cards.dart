@@ -1,21 +1,28 @@
 import 'package:flutter/material.dart';
 import 'hotel_page.dart';
 
-class Cards extends StatefulWidget {
-  const Cards({super.key});
+class Cards extends StatelessWidget {
+  final image;
+  final startTag;
+  final price;
+  final hotelName;
+  final address;
 
-  @override
-  State<Cards> createState() => _CardsState();
-}
+  Cards({
+    required this.image,
+    required this.startTag,
+    required this.price,
+    required this.hotelName,
+    required this.address,
+  });
 
-class _CardsState extends State<Cards> {
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Container(
           child: Image.asset(
-            'assets/banner-1.png',
+            image,
           ),
         ),
         Container(
@@ -28,7 +35,7 @@ class _CardsState extends State<Cards> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Hotel Horison Bekasi",
+                      hotelName,
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w700,
@@ -45,14 +52,13 @@ class _CardsState extends State<Cards> {
                       child: Column(
                         children: [
                           Text(
-                            'Mulai dari',
+                            startTag,
                             style: TextStyle(
                               color: Color(0xffE9E9E9),
                             ),
                           ),
                           Text(
-                            textAlign: TextAlign.end,
-                            'IDR 650.000',
+                            price,
                             style: TextStyle(
                               color: Colors.white,
                             ),
@@ -66,7 +72,7 @@ class _CardsState extends State<Cards> {
                   child: Row(
                     children: [
                       Text(
-                        'Kayuringin Jaya, jl.KH. Noer Ali',
+                        address,
                         style: TextStyle(
                           color: Color(0xffFFFBFB),
                           fontSize: 12.0,
